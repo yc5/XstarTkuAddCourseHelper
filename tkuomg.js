@@ -1,7 +1,12 @@
 $(document).ready(function(){
     $("#step2").hide();
     $("#step3").hide();
-    $("#OpenTheDoor").mousedown(function(){$("#step3").delay(2000).fadeIn('slow');});
+    $("#OpenTheDoor").mousedown(function(){
+        var stuID = $("#entry188530424");
+        $("#step3 small").html(stuID.val() + " 您好，請將產生後的開課序號拖曳至上方書籤列。");
+        $("#step2").delay(1000).fadeOut('slow');
+        $("#step3").delay(1000).delay('slow').fadeIn('slow');
+    });
 });
 
 
@@ -11,7 +16,7 @@ function showSec3(){
 }
 
 function delClass(){
-    $("#form_addclass a").last().fadeOut();
+    $("#form_addclass a").last().fadeOut().remove();
 }
     
 function generateClass(){
@@ -41,5 +46,6 @@ function generateOpenDoor(){
                            + '";  d.getElementById("txtPSWD").value = "' 
                            + pw.val()
                            + '";  d.getElementById("btnLogin").disabled=true;__doPostBack("btnLogin","");  d.getElementById("form1").submit();})();');
-    $("#step2").slideDown();
+    $("#step2 small").html(stuID.val() + " 您好，請將芝麻開門拖曳至上方書籤列。");
+    $("#step1").fadeOut("slow"); $("#step2").delay("slow").fadeIn("slow");
 }

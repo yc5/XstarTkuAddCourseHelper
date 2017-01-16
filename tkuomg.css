@@ -3,11 +3,11 @@ body{
 }
 ::-moz-selection { /* Code for Firefox */
     color: white;
-    background: #F09819;
+    background: #FF512F;
 }
 ::selection {
     color: white; 
-    background: #F09819;
+    background: #FF512F;
 }
 #sec_main{
     background: #F09819;
@@ -18,6 +18,10 @@ body{
 }
 h1{
     font-weight: bold;
+}
+h1 small{
+    color: white;
+    display: inline;
 }
 input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   color: white;
