@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>刺刺星淡江選課小幫手</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="tkuomg.css">
+<script src="tkuomg.js"></script>
+<meta name="theme-color" content="#F09819">
+</head>
+
+<body>
+<section id="sec_main">
+<div class="div-m">
+<h1>刺刺星淡江選課小幫手</h1>
+<a href="https://www.youtube.com/watch?v=1dsaNmeN514" target="_blank">使用教學</a>
+<a href="privacy.html" target="_blank">隱私權政策</a>
+<a href="" target="_blank">OpenSource on Github</a>
+<hr>
+<section id="step1">
+<h3>Step 1: Login</h3>
+<small>請以選課帳號登錄，以產生芝麻開門按鈕。</small>
+<form action="" onsubmit="generateOpenDoor()" target="hidden" id="form_login">
+    <input type="text" autocomplete="off" id="entry188530424" value="" placeholder="學號" >
+    <input type="password" autocomplete="off" id="entry200004417" value="" placeholder="密碼">
+    <div id="name"></div>
+    <input type="submit" class="btn-yes" value="登錄">
+</form>
+</section>
+
+<section id="step2">
+<h3>Step 2: Open The Door</h3>
+<small>請將芝麻開門拖曳至上方書籤列。</small>
+<a id="OpenTheDoor" href="" class="btn-yes" target="_blank">芝麻開門</a>
+</section>
+
+<section id="step3">
+<h3>Step 3: Add Class</h3>
+<form action="" onsubmit="generateClass()" target="hidden" id="form_addclass">
+<input type="text" class="" id="inputClassNum" placeholder="開課序號" autocomplete="off">
+<input type="submit" class="btn-yes" onclick="" value="產生">
+</form>
+<input type="button" onclick="delClass()" class="btn-yes" value="刪除上一個">
+</section>
+</div>
+</section>
+
+<section id="sec_footer">
+    <p>&copy; 2017 刺刺星 XSTAR.ME</p>
+</section>
+
+<iframe name="hidden" style="display:none"></iframe>
+
+</body>
+</html>
