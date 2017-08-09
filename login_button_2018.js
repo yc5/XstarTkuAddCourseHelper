@@ -1,7 +1,8 @@
 javascript:
-var loop, myStuNo = "<<Student Number>>", myPsWd = "<<Password>>";
+var loop, loop_img, myStuNo = "<<Student Number>>", myPsWd = "<<Password>>";
 var time_start = new Date(2017, 7, 8, 17, 30, 0);
 clearTimeout(loop);
+clearTimeout(loop_img);
 
 document.getElementById("txtStuNo").value = myStuNo;
 document.getElementById("txtPSWD").value = myPsWd;
@@ -45,3 +46,9 @@ document.getElementsByTagName("p")[1].innerHTML =
   }
   loop = setTimeout(autologin, 500);
 })();
+
+(function animate_imgcomfm() {
+  document.getElementById("imgCONFM").src = "http://www.ais.tku.edu.tw/EleCos/BaseData/confirm.ashx?s=" + new Date().getTime();
+  loop_img = setTimeout(animate_imgcomfm, 1000);
+})();
+
