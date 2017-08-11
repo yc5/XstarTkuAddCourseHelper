@@ -14,6 +14,12 @@ document.getElementById("txtCONFM").autocomplete = "off";
 document.getElementById("txtCONFM").select();
 document.getElementById("play1").click();
 
+document.getElementById("txtCONFM").addEventListener("keyup", function() {
+  if (event.charCode < 48 || event.charCode > 57) {
+    document.getElementById("txtCONFM").type = "number";
+    document.getElementById("txtCONFM").type = "text";
+  }
+});
 
 (function() {
   document.getElementsByTagName("p")[1].innerHTML =
