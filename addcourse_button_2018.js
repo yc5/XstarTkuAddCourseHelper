@@ -1,6 +1,10 @@
 javascript:
 if (window.location.pathname.indexOf("KeyinOver") !== -1) {
-  window.location.assign("http://www.ais.tku.edu.tw/EleCos/action.aspx");
+  if(window.location.pathname.indexOf("English") !== -1){
+    window.location.assign(window.location.href.replace("Other/KeyinOverE.aspx", "actionE.aspx"));
+  }else{
+    window.location.assign(window.location.href.replace("Other/KeyinOver.aspx", "action.aspx"));
+  }
 } else {
   var d = document.form1;
   d.txtCosEleSeq.value = "<<The Course Code>>";
