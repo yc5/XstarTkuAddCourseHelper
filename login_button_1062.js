@@ -57,17 +57,6 @@ document.getElementById("txtCONFM").addEventListener("keyup", function() {
 })();
 
 (function animate_imgcomfm() {
-  var host = "";
-  if (window.location.href.indexOf("EleCos_English") != -1) {
-    host = "http://www.ais.tku.edu.tw/EleCos_English";
-  } else if (window.location.href.indexOf("EleCos/") != -1) {
-    host = "http://www.ais.tku.edu.tw/EleCos";
-  } else if (window.location.href.indexOf("elecos") != -1) {
-    host = window.location.origin + "/elecos";
-  } else {
-    console.log("Error");
-  }
-
-  document.getElementById("imgCONFM").src = host + "/BaseData/confirm.ashx?s=" + new Date().getTime();
+  document.getElementById("imgCONFM").src = window.location.href.replace(/[Ll]ogin.*/g, "BaseData/confirm.ashx?s=" + new Date().getTime());
   loop_img = setTimeout(animate_imgcomfm, 1000);
 })();
