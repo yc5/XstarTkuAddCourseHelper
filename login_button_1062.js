@@ -36,24 +36,12 @@ document.getElementById("txtCONFM").addEventListener("keyup", function() {
 
 (function autologin() {
   if (document.getElementById("txtCONFM").value.length == 6) {
-    var now = new Date();
-    if (now >= time_start) {
-      document.getElementById("btnLogin").click();
-      clearTimeout(loop);
-    }
-
-    document.getElementById("showtime").innerHTML = "現在時間：" +
-      new Date() +
-      "<br />" +
-      "開放時間：" +
-      time_start;
-    console.clear();
-    console.log((time_start - now) / 1000 + "s");
-
+    document.getElementById("btnLogin").click();
+    clearTimeout(loop);
   } else {
     clearTimeout(loop);
   }
-  loop = setTimeout(autologin, 500);
+  loop = setTimeout(autologin, 100);
 })();
 
 (function animate_imgcomfm() {
