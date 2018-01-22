@@ -1,6 +1,5 @@
 javascript:
 var loop, loop_img, myStuNo = "StudentNumber", myPsWd = "Password";
-var time_start = new Date(2017, 7, 11, 12, 30, 0);
 clearTimeout(loop);
 clearTimeout(loop_img);
 
