@@ -1,3 +1,4 @@
+javascript:
 var classCode = ["0242", "0276", "0265", "1834"]; //Put your class codes in this array.
 var ms_VS = $("#__VIEWSTATE").val(),
   ms_VSG = "2E66DAD8",
